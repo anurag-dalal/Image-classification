@@ -62,11 +62,13 @@ Image-classification
          tensorboard --logdir logs
          ```
          to view the accuracy and loss in various epochs
-        The tensorboard logs are visualized like this:
-        ![Lenna Image](/images/loss_and_accuracy.PNG "loss image")
+        The tensorboard logs are visualized like this: \
+        ![Loss Image](/images/loss_and_accuracy.PNG "loss image")
 * If you want to use the pretrained model skip the previous step, the pretrained model is contained in the detectv1.h5 file.
 * The flask API is in the file app.py.
 * The to dockerize it open a terminal, navigate to the proper location which contain Dockerfile, then execute the following command:
 ```bash
 docker build -t flaskytd .
 ```
+This will build the docker image, the process will look like:\
+![Docker Build Image](/images/docker-build-image.PNG "loss image")
