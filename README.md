@@ -66,7 +66,7 @@ Image-classification
         self.KEYPOINT_FILE = '../Dataset/celebA/list_landmarks_align_celeba.csv'
         self.ATTRIBUTE_FILE = '../Dataset/celebA/list_attr_celeba.csv'
 ```
-* The CNN model used for calssification can be summerized as:
+* The CNN model used for calssification can be summerized as: \
 ![model Image](/images/model.PNG "loss image")
 * You can then run trainv3.py to train the model based on Male attribute, this can be changed in line 64 of dataloader2.py
          You can also open another terminal during training and run:
