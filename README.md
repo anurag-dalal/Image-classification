@@ -3,15 +3,18 @@ This repository contain training pipeline for training images from celebA datase
 
 # Project Details
 ## Requirements and pre-requisites
-* Python
-        * tensorflow
-        * opencv
-        * falsk
-        * anaconda
-* Docker
-* Postman
+
+* 1\. Python
+    * 1.1\. tensorflow
+    * 1.2\. opencv
+    * 1.2\. flask
+    * 1.2\. anaconda or venv
+* 2\. Docker
+* 3\. Postman
+
 ## Dataset
 The dataset used is the CelebFaces dataset, this can be found in [Dataset](https://www.kaggle.com/jessicali9530/celeba-dataset)
+
 ## Enviornment and installation guides
 The project is build using python 3.8.0 using anaconda for virtual enviornment.
 Anaconda can be download and installed visiting the website [Anaconda Download](https://www.anaconda.com/products/individual)
@@ -63,7 +66,8 @@ Image-classification
         self.KEYPOINT_FILE = '../Dataset/celebA/list_landmarks_align_celeba.csv'
         self.ATTRIBUTE_FILE = '../Dataset/celebA/list_attr_celeba.csv'
 ```
-
+* The CNN model used for calssification can be summerized as:
+![model Image](/images/model.PNG "loss image")
 * You can then run trainv3.py to train the model based on Male attribute, this can be changed in line 64 of dataloader2.py
          You can also open another terminal during training and run:
          ```
@@ -85,6 +89,8 @@ This will build the docker image, the process will look like:\
 docker run -it -p 5000:5000 flaskytd
 ```
 This will start the API running on localhost in port 5000. This will look like:
-![Docker Build Image](/images/docker-run-as-container.png "loss image")
+![Docker run Image](/images/docker-run-as-container.png "loss image")
 
 * Then we can use postman to check whether the API is working properly:
+![Postman Image](/images/postman-api.png "loss image")
+
