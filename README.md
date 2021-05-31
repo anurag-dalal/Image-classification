@@ -45,3 +45,13 @@ Image-classification
 |   train.py
 |   visualization.py
 ```
+
+* To change the dataset folder edit dataloader2.py line 11 to 14
+```python
+        self.DATASET_FOLDER = '../Dataset/celebA/img_align_celeba/img_align_celeba'
+        self.SPLIT_FILE = '../Dataset/celebA/list_eval_partition.csv'
+        self.KEYPOINT_FILE = '../Dataset/celebA/list_landmarks_align_celeba.csv'
+        self.ATTRIBUTE_FILE = '../Dataset/celebA/list_attr_celeba.csv'
+```
+
+* You can then run trainv3.py to train the model based on Male attribute, this can be changed in line 64 of dataloader2.py
