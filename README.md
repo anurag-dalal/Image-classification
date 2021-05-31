@@ -2,6 +2,8 @@
 This repository contain training pipeline for training images from celebA dataset for attribute based classification. Building an API and dockerizing it.
 
 # Project Details
+## Dataset
+The dataset used is the CelebFaces dataset, this can be found in [Dataset](https://www.kaggle.com/jessicali9530/celeba-dataset)
 ## Enviornment and installation guides
 The project is build using python 3.8.0 using anaconda for virtual enviornment.
 Anaconda can be download and installed visiting the website [Anaconda Download](https://www.anaconda.com/products/individual)
@@ -55,3 +57,16 @@ Image-classification
 ```
 
 * You can then run trainv3.py to train the model based on Male attribute, this can be changed in line 64 of dataloader2.py
+         You can also open another terminal during training and run:
+         ```bash
+         tensorboard --logdir logs
+         ```
+         to view the accuracy and loss in various epochs
+        The tensorboard logs are visualized like this:
+        ![Lenna Image](/images/loss_and_accuracy.PNG "loss image")
+* If you want to use the pretrained model skip the previous step, the pretrained model is contained in the detectv1.h5 file.
+* The flask API is in the file app.py.
+* The to dockerize it open a terminal, navigate to the proper location which contain Dockerfile, then execute the following command:
+```bash
+docker build -t flaskytd .
+```
