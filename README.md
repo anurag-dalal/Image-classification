@@ -2,6 +2,14 @@
 This repository contain training pipeline for training images from celebA dataset for attribute based classification. Building an API and dockerizing it.
 
 # Project Details
+## Requirements and pre-requisites
+* Python
+        * tensorflow
+        * opencv
+        * falsk
+        * anaconda
+* Docker
+* Postman
 ## Dataset
 The dataset used is the CelebFaces dataset, this can be found in [Dataset](https://www.kaggle.com/jessicali9530/celeba-dataset)
 ## Enviornment and installation guides
@@ -71,4 +79,12 @@ Image-classification
 docker build -t flaskytd .
 ```
 This will build the docker image, the process will look like:\
-![Docker Build Image](/images/docker-build-image.PNG "loss image")
+![Docker Build Image](/images/docker-build-image.png "loss image")
+* Then we can run the dockerfile by the following command:
+```bash
+docker run -it -p 5000:5000 flaskytd
+```
+This will start the API running on localhost in port 5000. This will look like:
+![Docker Build Image](/images/docker-run-as-container.png "loss image")
+
+* Then we can use postman to check whether the API is working properly:
