@@ -58,7 +58,7 @@ Image-classification
 
 * You can then run trainv3.py to train the model based on Male attribute, this can be changed in line 64 of dataloader2.py
          You can also open another terminal during training and run:
-         ```bash
+         ```
          tensorboard --logdir logs
          ```
          to view the accuracy and loss in various epochs
